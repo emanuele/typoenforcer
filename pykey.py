@@ -103,6 +103,9 @@ def char_to_keycode(ch):
     if keycode == 0:
         print "Sorry, can't map", ch
 
+    if ch == '<':
+        keycode = 59
+
     if is_shifted(ch):
         shift_mask = Xlib.X.ShiftMask
     else:
